@@ -1,40 +1,14 @@
-body {
-  font-family: Arial;
-  background: #0f0f0f;
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #25D366;
   color: white;
-  text-align: center;
-  margin: 0;
-}
-
-.container {
-  padding: 20px;
-}
-
-h1 {
-  color: #00ff99;
-}
-
-.card {
-  background: #1c1c1c;
-  margin: 20px auto;
-  padding: 15px;
-  width: 80%;
-  border-radius: 10px;
-}
-
-.card a {
-  display: block;
-  color: #00ccff;
-  margin: 8px 0;
   text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
-.card a:hover {
-  color: #00ff99;
-}
-
-footer {
-  margin-top: 30px;
-  font-size: 12px;
-  color: gray;
+.whatsapp-btn:hover {
+  background: #1ebe5d;
 }
