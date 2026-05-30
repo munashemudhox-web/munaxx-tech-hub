@@ -201,9 +201,6 @@ color:#ccc;
     box-shadow:0 0 25px rgba(0,255,136,.4);
 }
 
-.download-btn:hover{
-transform:scale(1.02);
-}
 
 .download-btn::before{
 content:"";
