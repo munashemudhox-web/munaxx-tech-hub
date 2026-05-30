@@ -7,442 +7,208 @@ font-family:'Orbitron',sans-serif;
 
 body{
 background:#020617;
-color:#ffffff;
+color:white;
 overflow-x:hidden;
-min-height:100vh;
-position:relative;
 }
 
-/* PARTICLES BACKGROUND */
+/* PARTICLES */
 #tsparticles{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
 z-index:-1;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#020617;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.spinner{
+width:40px;
+height:40px;
+border:4px solid #1e293b;
+border-top:4px solid #22c55e;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+/* LOGIN */
+.login{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:#08101f;
+padding:25px;
+border-radius:15px;
+width:90%;
+max-width:350px;
+text-align:center;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:8px 0;
+background:#020617;
+border:none;
+color:white;
+border-radius:10px;
+}
+
+.login-box button{
+width:100%;
+padding:12px;
+background:#22c55e;
+border:none;
+color:white;
+font-weight:bold;
+border-radius:10px;
 }
 
 /* HEADER */
 header{
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:15px 18px;
-background:rgba(8,16,31,.85);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #1e293b;
-position:sticky;
-top:0;
-z-index:1000;
+padding:15px;
+background:#08101f;
 }
 
-.logo{
+/* NAV */
+.nav{
 display:flex;
-flex-direction:column;
-font-weight:800;
-font-size:1rem;
-line-height:1.1;
-color:#22c55e;
+justify-content:space-around;
+padding:10px;
 }
 
-.logo span:last-child{
-color:#3b82f6;
-}
-
-.live{
-display:flex;
-align-items:center;
-gap:6px;
-font-size:.85rem;
-color:#22c55e;
-}
-
-.dot{
-width:10px;
-height:10px;
-border-radius:50%;
-background:#22c55e;
-box-shadow:0 0 12px #22c55e;
-}
-
-#clock{
-color:#3b82f6;
-font-weight:700;
-font-size:.9rem;
+.nav button{
+background:#0f172a;
+border:none;
+padding:10px;
+color:white;
+border-radius:8px;
 }
 
 /* HERO */
 .hero{
-padding:45px 18px;
-text-align:left;
+padding:20px;
 }
 
-.status-badge{
-display:inline-block;
-padding:10px 14px;
-border:1px solid #22c55e;
-border-radius:12px;
-color:#22c55e;
-background:rgba(34,197,94,.08);
-font-size:.75rem;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:3.5rem;
-font-weight:800;
-line-height:.95;
-}
-
-.hero h1 span{
-color:#3b82f6;
-}
-
-.hero p{
-margin-top:15px;
-color:#94a3b8;
-line-height:1.7;
-font-size:.95rem;
-max-width:600px;
-}
+.hero span{color:#3b82f6}
 
 /* QUOTES */
-.quote-slider{
-padding:20px 18px;
+.quotes{
+text-align:center;
+height:40px;
 position:relative;
-height:60px;
-overflow:hidden;
 }
 
-.quote{
+.q{
 position:absolute;
+width:100%;
 opacity:0;
-transform:translateY(20px);
-transition:.5s ease;
-color:#94a3b8;
-font-size:.9rem;
+transition:.5s;
 }
 
-.quote.active{
-opacity:1;
-transform:translateY(0);
-}
+.q.active{opacity:1}
 
-/* STATS */
-.stats{
+/* GRID */
+.grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:18px;
+gap:10px;
+padding:15px;
 }
 
-.stat-card{
+.vpn{
 background:#08101f;
-border:1px solid #1e293b;
-border-radius:18px;
 padding:18px;
 text-align:center;
-transition:.3s;
-}
-
-.stat-card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 20px rgba(59,130,246,.25);
-}
-
-.stat-card h2{
-font-size:1.8rem;
-color:#3b82f6;
-}
-
-.stat-card p{
-font-size:.75rem;
-color:#94a3b8;
-margin-top:8px;
-}
-
-/* SECTION TITLE */
-.section-title{
-padding:18px;
-color:#94a3b8;
-font-size:.85rem;
-letter-spacing:3px;
-}
-
-/* VPN CARDS */
-.vpn-card{
-margin:14px 18px;
-padding:22px;
-background:#08101f;
-border:1px solid #1e293b;
-border-radius:20px;
-box-shadow:0 0 15px rgba(37,99,235,.12);
-transition:.3s;
-}
-
-.vpn-card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 25px rgba(37,99,235,.25);
-}
-
-.vpn-card h2{
-font-size:1.5rem;
-margin-bottom:8px;
-}
-
-.vpn-card p{
-color:#94a3b8;
-margin-bottom:18px;
-font-size:.85rem;
-}
-
-/* BUTTON */
-.download-btn{
-width:100%;
-padding:16px;
-border:none;
-border-radius:14px;
-background:#16a34a;
-color:white;
-font-weight:700;
+border-radius:10px;
 cursor:pointer;
-transition:.3s;
-font-size:.9rem;
 }
 
-.download-btn:hover{
-background:#22c55e;
-box-shadow:0 0 20px #22c55e;
-transform:translateY(-2px);
+/* VIP */
+.vip-box{
+padding:15px;
+text-align:center;
+}
+
+.vip-box input{
+padding:10px;
+width:80%;
+margin:10px;
 }
 
 /* OWNER */
-.owner-section{
-padding:20px 18px;
-}
-
-.owner-section h2{
-font-size:1rem;
-color:#94a3b8;
-letter-spacing:2px;
-margin-bottom:10px;
-}
-
-.owner-card{
-background:#08101f;
-border:1px solid #1e293b;
+.owner{
 padding:15px;
-border-radius:15px;
-color:#94a3b8;
-line-height:1.7;
+background:#08101f;
+margin:15px;
+border-radius:10px;
 }
 
-/* CONTACT BUTTON */
-.contact-section,
-.channel-section{
-padding:10px 18px;
-}
-
-.contact-btn{
+/* LINKS */
+.wa,.channel{
 display:block;
+margin:15px;
+padding:15px;
 text-align:center;
-padding:16px;
-border-radius:15px;
-background:#25D366;
 color:white;
-font-weight:700;
 text-decoration:none;
-box-shadow:0 0 20px rgba(37,211,102,.3);
+border-radius:10px;
 }
 
-.contact-btn:hover{
-box-shadow:0 0 30px rgba(37,211,102,.6);
-}
+.wa{background:#25D366}
+.channel{background:#2563eb}
 
-.channel-btn{
-display:block;
-text-align:center;
-padding:16px;
-border-radius:15px;
-background:linear-gradient(90deg,#16a34a,#3b82f6);
-color:white;
-font-weight:700;
-text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px 18px;
-color:#94a3b8;
-font-size:.85rem;
-}
-
-/* MODAL POPUP */
+/* MODAL */
 .modal{
 display:none;
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,.8);
 justify-content:center;
 align-items:center;
-z-index:9999;
+}
+
+.box{
+background:#08101f;
 padding:20px;
-}
-
-.modal-content{
-width:100%;
-max-width:420px;
-background:#08101f;
-border:1px solid #1e293b;
-border-radius:25px;
-padding:25px;
+border-radius:15px;
 text-align:center;
-box-shadow:0 0 30px rgba(59,130,246,.3);
 }
 
-.emoji{
-font-size:50px;
-margin-bottom:15px;
-}
-
-.modal-content h2{
-margin-bottom:10px;
-}
-
-.modal-content p{
-color:#94a3b8;
-font-size:.9rem;
-line-height:1.6;
-margin-bottom:18px;
-}
-
-.status-box{
-background:#020617;
-border:1px solid #1e293b;
-padding:14px;
-border-radius:12px;
-margin-bottom:10px;
-color:#94a3b8;
-font-size:.8rem;
-}
-
-.close-btn{
-width:100%;
-padding:15px;
-border:none;
-border-radius:14px;
-background:#3b82f6;
-color:white;
-font-weight:700;
-cursor:pointer;
-}
-
-.close-btn:hover{
-background:#60a5fa;
-}
-
-/* DESKTOP */
-@media(min-width:768px){
-
-.hero h1{
-font-size:5rem;
-}
-
-.stats{
-grid-template-columns:repeat(4,1fr);
-max-width:1200px;
-margin:auto;
-}
-
-.vpn-card{
-max-width:900px;
-margin:20px auto;
-}
-
-.quote-slider{
-max-width:900px;
-margin:auto;
-}
-
-}
-/* LOGIN PAGE */
-
-.login-body{
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:radial-gradient(circle at top,#0f172a,#020617);
-}
-
-.login-container{
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.login-box{
-width:90%;
-max-width:380px;
-background:#08101f;
-border:1px solid #1e293b;
-border-radius:20px;
-padding:30px;
-text-align:center;
-box-shadow:0 0 30px rgba(59,130,246,.2);
-}
-
-.login-box h1{
-color:#22c55e;
-margin-bottom:10px;
-}
-
-.login-box p{
-color:#94a3b8;
-margin-bottom:25px;
-}
-
-.login-box input{
-width:100%;
-padding:15px;
-margin-bottom:12px;
-border-radius:12px;
-border:1px solid #1e293b;
-background:#020617;
-color:white;
-outline:none;
-}
-
-.login-box input:focus{
-border-color:#3b82f6;
-box-shadow:0 0 10px rgba(59,130,246,.3);
-}
-
-.login-box button{
-width:100%;
-padding:15px;
-background:#16a34a;
-border:none;
-border-radius:12px;
-color:white;
-font-weight:700;
-cursor:pointer;
+/* TOAST */
+#toast{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#22c55e;
+padding:10px 20px;
+border-radius:10px;
+opacity:0;
 transition:.3s;
 }
 
-.login-box button:hover{
-background:#22c55e;
-transform:translateY(-2px);
-}
-
-.login-footer{
-margin-top:15px;
-color:#64748b;
-font-size:.85rem;
+#toast.show{
+opacity:1;
 }
