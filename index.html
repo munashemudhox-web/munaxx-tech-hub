@@ -6,7 +6,6 @@
 <title>MUNAXXTECH VPNS HUB</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -14,8 +13,8 @@
 
 <div class="bg-animation"></div>
 
-<!-- LOGIN PAGE -->
-<section class="auth-container">
+<!-- AUTH SECTION -->
+<section class="auth-container" id="auth">
 
 <div class="auth-box">
 
@@ -25,25 +24,23 @@
 </div>
 
 <div class="tabs">
-<button class="active">Login</button>
-<button>Sign Up</button>
+<button class="tab active" id="loginTab">Login</button>
+<button class="tab" id="signupTab">Sign Up</button>
 </div>
 
-<form>
+<form id="authForm">
 
 <div class="input-group">
 <label>Email</label>
-<input type="email" placeholder="Enter email">
+<input type="email" id="email" placeholder="Enter email">
 </div>
 
 <div class="input-group">
 <label>Password</label>
-<input type="password" placeholder="Enter password">
+<input type="password" id="password" placeholder="Enter password">
 </div>
 
-<button class="main-btn">
-Login
-</button>
+<button class="main-btn" type="submit" id="authBtn">Login</button>
 
 </form>
 
@@ -52,21 +49,14 @@ Login
 </section>
 
 <!-- DASHBOARD -->
-
-<section class="dashboard">
+<section class="dashboard" id="dashboard">
 
 <header class="hero">
-
 <h1>MUNAXXTECH VPNS HUB</h1>
-
-<p>
-Premium VPN Configurations & Secure Internet Access
-</p>
-
+<p>Premium VPN Configurations & Secure Internet Access</p>
 </header>
 
 <!-- STATUS -->
-
 <div class="status-grid">
 
 <div class="status-card">
@@ -86,175 +76,77 @@ Premium VPN Configurations & Secure Internet Access
 
 </div>
 
-<!-- VPN CONFIGS -->
-
-<h2 class="section-title">
-Available VPN Configurations
-</h2>
+<h2 class="section-title">VPN CONFIGURATIONS</h2>
 
 <div class="vpn-grid">
 
 <div class="vpn-card">
-
 <h3>SSH PREMIUM</h3>
-
-<p>
-Fast SSH configuration for stable internet access.
-</p>
-
-<a href="#" class="download-btn">
-Download Config
-</a>
-
+<p>Fast stable SSH configuration</p>
+<a href="#" class="download-btn">Download</a>
 </div>
 
 <div class="vpn-card">
-
-<h3>OPENVPN</h3>
-
-<p>
-Secure OpenVPN files for Android and PC.
-</p>
-
-<a href="#" class="download-btn">
-Download Config
-</a>
-
-</div>
-
-<div class="vpn-card">
-
 <h3>HTTP CUSTOM</h3>
-
-<p>
-HTTP Custom files optimized for speed.
-</p>
-
-<a href="#" class="download-btn">
-Download Config
-</a>
-
+<p>Optimized HTTP Custom config</p>
+<a href="#" class="download-btn">Download</a>
 </div>
 
 <div class="vpn-card">
-
-<h3>UDP CUSTOM</h3>
-
-<p>
-Gaming and streaming optimized VPN.
-</p>
-
-<a href="#" class="download-btn">
-Download Config
-</a>
-
+<h3>OPENVPN</h3>
+<p>Secure OpenVPN access</p>
+<a href="#" class="download-btn">Download</a>
 </div>
 
 </div>
 
 <!-- OWNER -->
-
 <section class="owner-section">
 
 <h2>OWNER INFORMATION</h2>
 
 <div class="owner-card">
 
-<div class="owner-avatar">
-M
-</div>
+<div class="owner-avatar">M</div>
 
 <div class="owner-details">
-
-<p><strong>Name:</strong> Munaxx</p>
-
-<p><strong>Country:</strong> Zimbabwe 🇿🇼</p>
-
-<p><strong>City:</strong> Harare</p>
-
-<p><strong>Code:</strong> HTML</p>
-
+<p><b>Name:</b> Munaxx</p>
+<p><b>Country:</b> Zimbabwe 🇿🇼</p>
+<p><b>City:</b> Harare</p>
+<p><b>Code:</b> HTML</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTACTS -->
-
+<!-- CONTACT -->
 <section class="contact-section">
 
-<h2>CONNECT WITH MUNAXXTECH</h2>
+<h2>CONNECT WITH US</h2>
 
 <div class="contact-buttons">
 
-<a
-href="https://wa.me/263716250711"
-target="_blank"
-class="whatsapp-btn">
-
-Chat On WhatsApp
-
+<a href="https://wa.me/263716250711" class="whatsapp-btn" target="_blank">
+WhatsApp Chat
 </a>
 
-<a
-href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A"
-target="_blank"
-class="channel-btn">
-
-Join WhatsApp Channel
-
+<a href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A" class="channel-btn" target="_blank">
+WhatsApp Channel
 </a>
 
 </div>
 
 </section>
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<h2>WHY CHOOSE US?</h2>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-⚡ Fast Servers
-</div>
-
-<div class="feature-card">
-🔒 Secure Connection
-</div>
-
-<div class="feature-card">
-🌍 Global Access
-</div>
-
-<div class="feature-card">
-📱 Mobile Friendly
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
 
 <footer>
-
 <h2>MUNAXXTECH VPNS HUB</h2>
-
-<p>
-Providing secure and reliable VPN configurations.
-</p>
-
-<p>
-© 2025 MUNAXXTECH VPNS HUB
-</p>
-
+<p>Secure & Fast VPN Access</p>
 </footer>
 
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
