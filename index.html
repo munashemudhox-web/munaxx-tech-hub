@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUNAXX TECH VPN HUB</title>
+<title>MUNAXX VPN TECH HUB</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
+
 <body>
 
 <div id="tsparticles"></div>
@@ -18,7 +19,7 @@
 <header>
     <div class="logo">
         <span>MUNAXX</span>
-        <span>TECH</span>
+        <span>VPN TECH HUB</span>
     </div>
 
     <div class="live">
@@ -43,27 +44,27 @@
 
     <p>
         Professional VPN configurations for Zimbabwe networks.
-        Fast, secure and always online.
+        Fast, secure and always connected.
     </p>
 
 </section>
 
-<section class="whatsapp-section">
+<section class="quote-slider">
 
-    <a href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A"
-       target="_blank"
-       class="whatsapp-btn">
+    <div class="quote active">
+        ⭐ VPN is fast, secure, free and professionally managed.
+    </div>
 
-       JOIN MUNAXX TECH VPNS HUB WHATSAPP CHANNEL
-
-    </a>
+    <div class="quote">
+        ⭐ MUNAXX TECH helps Zimbabwe 🇿🇼 stay connected always.
+    </div>
 
 </section>
 
 <section class="stats">
 
     <div class="stat-card">
-        <h2>9</h2>
+        <h2>12</h2>
         <p>VPN APPS</p>
     </div>
 
@@ -78,109 +79,209 @@
     </div>
 
     <div class="stat-card">
-        <h2>100%</h2>
-        <p>LIVE</p>
+        <h2>AES</h2>
+        <p>256 BIT</p>
     </div>
 
 </section>
 
-<h3 class="section-title">LIVE STATUS</h3>
-
-<div class="live-panel">
-
-    <div>
-        <small>UPTIME</small>
-        <h2>13S</h2>
-    </div>
-
-    <div>
-        <small>LATENCY</small>
-        <h2>7ms</h2>
-    </div>
-
-    <div>
-        <small>BATTERY</small>
-        <h2>92%</h2>
-    </div>
-
-    <div>
-        <small>ENCRYPTION</small>
-        <h2>AES-256</h2>
-    </div>
-
-</div>
-
 <h3 class="section-title">VPN CONFIGURATIONS</h3>
 
 <div class="vpn-card">
-    <h2>NPV Tunnel</h2>
-    <p>VPN CORE</p>
-
-    <a href="configs/npv.npv4" class="download-btn">
-        DOWNLOAD CONFIG
-    </a>
+    <h2>HA Tunnel</h2>
+    <p>SSL / SSH VPN</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
 </div>
 
 <div class="vpn-card">
     <h2>HTTP Injector</h2>
-    <p>HTTP PAYLOAD</p>
-
-    <a href="configs/injector.ehi" class="download-btn">
-        DOWNLOAD CONFIG
-    </a>
+    <p>HTTP Payload</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
 </div>
 
 <div class="vpn-card">
     <h2>HTTP Custom</h2>
-    <p>CUSTOM HEADERS</p>
+    <p>Custom Headers</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
 
-    <a href="configs/custom.hc" class="download-btn">
-        DOWNLOAD CONFIG
-    </a>
+<div class="vpn-card">
+    <h2>NPV Tunnel</h2>
+    <p>VPN Core</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
+
+<div class="vpn-card">
+    <h2>V2Box</h2>
+    <p>V2Ray Core</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
+
+<div class="vpn-card">
+    <h2>SocksIP</h2>
+    <p>Socks Proxy VPN</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
+
+<div class="vpn-card">
+    <h2>Stark VPN</h2>
+    <p>SSH & SSL</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
 </div>
 
 <div class="vpn-card">
     <h2>Tik Tunnel</h2>
-    <p>UDP STREAM</p>
-
-    <a href="configs/tik.tmt" class="download-btn">
-        DOWNLOAD CONFIG
-    </a>
+    <p>UDP Stream</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
 </div>
 
+<div class="vpn-card">
+    <h2>NetMod</h2>
+    <p>VPN Mod</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
+
+<div class="vpn-card">
+    <h2>TLS Tunnel</h2>
+    <p>TLS VPN</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
+
+<div class="vpn-card">
+    <h2>AnonyTun</h2>
+    <p>Stealth VPN</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
+
+<div class="vpn-card">
+    <h2>WireGuard</h2>
+    <p>Modern VPN Protocol</p>
+    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+</div>
+
+<section class="owner-section">
+
+    <h2>OWNER INFORMATION</h2>
+
+    <div class="owner-card">
+        <p><strong>Name:</strong> MUNAXX</p>
+        <p><strong>Country:</strong> Zimbabwe, Harare</p>
+        <p><strong>Code:</strong> HTML</p>
+    </div>
+
+</section>
+
+<section class="contact-section">
+
+    <a href="https://wa.me/263780930212" target="_blank" class="contact-btn">
+        CONTACT ON WHATSAPP
+    </a>
+
+</section>
+
+<section class="channel-section">
+
+    <a href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A"
+       target="_blank"
+       class="channel-btn">
+
+       JOIN MUNAXX TECH VPNS HUB CHANNEL
+
+    </a>
+
+</section>
+
 <footer>
-    <p>© 2025 MUNAXX TECH VPN HUB</p>
+    <p>© 2025 MUNAXX VPN TECH HUB</p>
+    <p>Zimbabwe 🇿🇼</p>
 </footer>
+
+<!-- POPUP -->
+
+<div id="configModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="emoji">😉</div>
+
+        <h2>File Not Available</h2>
+
+        <p>
+            This config file is currently unavailable.
+            Check back soon or contact MUNAXX directly.
+        </p>
+
+        <div class="status-box">
+            ● CONFIG • OFFLINE
+        </div>
+
+        <div class="status-box">
+            ● AES-256 • PENDING
+        </div>
+
+        <button class="close-btn" onclick="closeModal()">
+            CLOSE
+        </button>
+
+    </div>
+
+</div>
 
 <script>
 
 function updateClock() {
     const now = new Date();
-
     document.getElementById("clock").innerHTML =
-        now.toLocaleTimeString();
+    now.toLocaleTimeString();
 }
 
 setInterval(updateClock,1000);
 updateClock();
 
+function openModal(){
+document.getElementById("configModal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("configModal").style.display="none";
+}
+
+window.onclick=function(event){
+let modal=document.getElementById("configModal");
+
+if(event.target===modal){
+modal.style.display="none";
+}
+}
+
+const quotes=document.querySelectorAll('.quote');
+let current=0;
+
+setInterval(()=>{
+quotes[current].classList.remove('active');
+
+current=(current+1)%quotes.length;
+
+quotes[current].classList.add('active');
+},4000);
+
 tsParticles.load("tsparticles",{
-    particles:{
-        number:{value:60},
-        color:{value:"#22c55e"},
-        links:{
-            enable:true,
-            color:"#2563eb",
-            distance:150
-        },
-        move:{
-            enable:true,
-            speed:1
-        },
-        size:{
-            value:2
-        }
-    }
+particles:{
+number:{value:60},
+color:{value:"#22c55e"},
+links:{
+enable:true,
+color:"#2563eb",
+distance:150
+},
+move:{
+enable:true,
+speed:1
+},
+size:{
+value:2
+}
+}
 });
 
 </script>
