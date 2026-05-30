@@ -6,9 +6,7 @@
 <title>MUNAXX VPN TECH HUB</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
@@ -16,271 +14,211 @@
 
 <div id="tsparticles"></div>
 
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Connecting Secure Network...</p>
+</div>
+
+<!-- LOGIN -->
+<section id="loginPage" class="login">
+  <div class="login-box">
+    <h1>MUNAXX VPN</h1>
+
+    <input id="user" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+
+    <button onclick="login()">LOGIN</button>
+
+    <small>admin / admin</small>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" style="display:none;">
+
 <header>
-    <div class="logo">
-        <span>MUNAXX</span>
-        <span>VPN TECH HUB</span>
-    </div>
-
-    <div class="live">
-        <span class="dot"></span>
-        LIVE
-    </div>
-
-    <div id="clock"></div>
+  <div class="logo">MUNAXX <span>VPN HUB</span></div>
+  <div class="live"><span class="dot"></span> LIVE</div>
+  <div id="clock"></div>
 </header>
 
+<!-- NAV -->
+<div class="nav">
+  <button onclick="showTab('home')">HOME</button>
+  <button onclick="showTab('vpn')">VPN LIST</button>
+  <button onclick="showTab('vip')">VIP</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="tab active">
+
 <section class="hero">
+  <div class="badge">● SECURE SERVER ONLINE</div>
+  <h1>VPN <span>ACCESS</span> HUB</h1>
+  <p>Zimbabwe 🇿🇼 fastest VPN configs system</p>
+</section>
 
-    <div class="status-badge">
-        ● ALL SERVERS OPERATIONAL
-    </div>
+<div class="quotes">
+  <div class="q active">⭐ Fast, secure & professional VPN</div>
+  <div class="q">⭐ MUNAXX TECH connects Africa</div>
+  <div class="q">⭐ Stable tunnels 24/7 uptime</div>
+</div>
 
-    <h1>
-        SECURE<br>
-        <span>VPN</span><br>
-        ACCESS
-    </h1>
+</div>
 
-    <p>
-        Professional VPN configurations for Zimbabwe networks.
-        Fast, secure and always connected.
-    </p>
+<!-- VPN LIST -->
+<div id="vpn" class="tab">
+
+<h3 class="title">FREE VPN CONFIGS</h3>
+
+<div class="grid">
+
+<div class="vpn" onclick="download('HA Tunnel')">HA Tunnel</div>
+<div class="vpn" onclick="download('HTTP Injector')">HTTP Injector</div>
+<div class="vpn" onclick="download('HTTP Custom')">HTTP Custom</div>
+<div class="vpn" onclick="download('NPV Tunnel')">NPV Tunnel</div>
+<div class="vpn" onclick="download('V2Box')">V2Box</div>
+<div class="vpn" onclick="download('SocksIP')">SocksIP</div>
+<div class="vpn" onclick="download('Stark VPN')">Stark VPN</div>
+<div class="vpn" onclick="download('Tik Tunnel')">Tik Tunnel</div>
+
+</div>
+
+</div>
+
+<!-- VIP -->
+<div id="vip" class="tab">
+
+<h3 class="title">VIP CONFIGS 🔒</h3>
+
+<div class="vip-box">
+
+<p>Enter VIP Code:</p>
+<input id="vipCode" placeholder="VIP CODE">
+
+<button onclick="checkVIP()">UNLOCK</button>
+
+</div>
+
+<div id="vipContent" style="display:none;">
+
+<div class="grid">
+
+<div class="vpn" onclick="download('VIP HA Tunnel')">VIP HA Tunnel</div>
+<div class="vpn" onclick="download('VIP HTTP Injector')">VIP HTTP Injector</div>
+<div class="vpn" onclick="download('VIP V2Ray')">VIP V2Ray</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- OWNER -->
+<div class="owner">
+<p>Owner: MUNAXX</p>
+<p>Zimbabwe 🇿🇼 Harare</p>
+</div>
+
+<!-- CONTACT -->
+<a class="wa" href="https://wa.me/263780930212" target="_blank">WHATSAPP CONTACT</a>
+<a class="channel" href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A" target="_blank">WHATSAPP CHANNEL</a>
+
+<footer>© 2025 MUNAXX VPN HUB</footer>
 
 </section>
 
-<section class="quote-slider">
-
-    <div class="quote active">
-        ⭐ VPN is fast, secure, free and professionally managed.
-    </div>
-
-    <div class="quote">
-        ⭐ MUNAXX TECH helps Zimbabwe 🇿🇼 stay connected always.
-    </div>
-
-</section>
-
-<section class="stats">
-
-    <div class="stat-card">
-        <h2>12</h2>
-        <p>VPN APPS</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>7ms</h2>
-        <p>LATENCY</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>24/7</h2>
-        <p>UPTIME</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>AES</h2>
-        <p>256 BIT</p>
-    </div>
-
-</section>
-
-<h3 class="section-title">VPN CONFIGURATIONS</h3>
-
-<div class="vpn-card">
-    <h2>HA Tunnel</h2>
-    <p>SSL / SSH VPN</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="box">
+    <h2>FILE NOT AVAILABLE</h2>
+    <p id="fileText"></p>
+    <button onclick="closeModal()">CLOSE</button>
+  </div>
 </div>
 
-<div class="vpn-card">
-    <h2>HTTP Injector</h2>
-    <p>HTTP Payload</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>HTTP Custom</h2>
-    <p>Custom Headers</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>NPV Tunnel</h2>
-    <p>VPN Core</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>V2Box</h2>
-    <p>V2Ray Core</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>SocksIP</h2>
-    <p>Socks Proxy VPN</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>Stark VPN</h2>
-    <p>SSH & SSL</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>Tik Tunnel</h2>
-    <p>UDP Stream</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>NetMod</h2>
-    <p>VPN Mod</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>TLS Tunnel</h2>
-    <p>TLS VPN</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>AnonyTun</h2>
-    <p>Stealth VPN</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<div class="vpn-card">
-    <h2>WireGuard</h2>
-    <p>Modern VPN Protocol</p>
-    <button class="download-btn" onclick="openModal()">DOWNLOAD CONFIG</button>
-</div>
-
-<section class="owner-section">
-
-    <h2>OWNER INFORMATION</h2>
-
-    <div class="owner-card">
-        <p><strong>Name:</strong> MUNAXX</p>
-        <p><strong>Country:</strong> Zimbabwe, Harare</p>
-        <p><strong>Code:</strong> HTML</p>
-    </div>
-
-</section>
-
-<section class="contact-section">
-
-    <a href="https://wa.me/263780930212" target="_blank" class="contact-btn">
-        CONTACT ON WHATSAPP
-    </a>
-
-</section>
-
-<section class="channel-section">
-
-    <a href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A"
-       target="_blank"
-       class="channel-btn">
-
-       JOIN MUNAXX TECH VPNS HUB CHANNEL
-
-    </a>
-
-</section>
-
-<footer>
-    <p>© 2025 MUNAXX VPN TECH HUB</p>
-    <p>Zimbabwe 🇿🇼</p>
-</footer>
-
-<!-- POPUP -->
-
-<div id="configModal" class="modal">
-
-    <div class="modal-content">
-
-        <div class="emoji">😉</div>
-
-        <h2>File Not Available</h2>
-
-        <p>
-            This config file is currently unavailable.
-            Check back soon or contact MUNAXX directly.
-        </p>
-
-        <div class="status-box">
-            ● CONFIG • OFFLINE
-        </div>
-
-        <div class="status-box">
-            ● AES-256 • PENDING
-        </div>
-
-        <button class="close-btn" onclick="closeModal()">
-            CLOSE
-        </button>
-
-    </div>
-
-</div>
+<!-- TOAST -->
+<div id="toast"></div>
 
 <script>
 
-function updateClock() {
-    const now = new Date();
-    document.getElementById("clock").innerHTML =
-    now.toLocaleTimeString();
+// LOADER
+window.onload=()=>{
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},1200);
+};
+
+// LOGIN
+function login(){
+let u=user.value;
+let p=pass.value;
+
+if(u==="admin" && p==="admin"){
+loginPage.style.display="none";
+dashboard.style.display="block";
+toast("Login successful");
+}else{
+toast("Wrong login");
+}
 }
 
-setInterval(updateClock,1000);
-updateClock();
-
-function openModal(){
-document.getElementById("configModal").style.display="flex";
+// TABS
+function showTab(tab){
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+document.getElementById(tab).classList.add("active");
 }
 
+// CLOCK
+setInterval(()=>clock.innerText=new Date().toLocaleTimeString(),1000);
+
+// DOWNLOAD
+function download(name){
+fileText.innerText=name+" config is not uploaded yet.";
+modal.style.display="flex";
+}
+
+// VIP
+function checkVIP(){
+if(vipCode.value==="MUNAXXVIP"){
+vipContent.style.display="block";
+toast("VIP Unlocked");
+}else{
+toast("Wrong VIP Code");
+}
+}
+
+// MODAL
 function closeModal(){
-document.getElementById("configModal").style.display="none";
-}
-
-window.onclick=function(event){
-let modal=document.getElementById("configModal");
-
-if(event.target===modal){
 modal.style.display="none";
 }
+
+// TOAST
+function toast(msg){
+let t=document.getElementById("toast");
+t.innerText=msg;
+t.classList.add("show");
+setTimeout(()=>t.classList.remove("show"),2000);
 }
 
-const quotes=document.querySelectorAll('.quote');
-let current=0;
-
+// QUOTES
+let q=document.querySelectorAll(".q");
+let i=0;
 setInterval(()=>{
-quotes[current].classList.remove('active');
+q[i].classList.remove("active");
+i=(i+1)%q.length;
+q[i].classList.add("active");
+},3000);
 
-current=(current+1)%quotes.length;
-
-quotes[current].classList.add('active');
-},4000);
-
+// PARTICLES
 tsParticles.load("tsparticles",{
 particles:{
-number:{value:60},
+number:{value:50},
 color:{value:"#22c55e"},
-links:{
-enable:true,
-color:"#2563eb",
-distance:150
-},
-move:{
-enable:true,
-speed:1
-},
-size:{
-value:2
-}
+links:{enable:true,color:"#2563eb",distance:140},
+move:{enable:true,speed:1},
+size:{value:2}
 }
 });
 
