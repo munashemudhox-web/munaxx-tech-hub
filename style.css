@@ -303,9 +303,11 @@ font-weight:bold;
 }
 
 .quote-box{
-background:#151d35;
-padding:15px;
-border-radius:12px;
+    background:rgba(21,29,53,.9);
+    padding:15px;
+    border-radius:12px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 15px rgba(0,255,136,.08);
 }
 
 footer{
