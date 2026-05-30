@@ -7,15 +7,14 @@ font-family:Arial,sans-serif;
 }
 
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
     color:white;
-    background:
-    radial-gradient(circle at top left, #00ff88 0%, transparent 25%),
-    radial-gradient(circle at bottom right, #00aaff 0%, transparent 25%),
-    linear-gradient(135deg, #020617, #071a52, #020617);
-    background-attachment: fixed;
+    padding:20px;
     min-height:100vh;
+    background:
+    radial-gradient(circle at top left, rgba(0,255,136,.25), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(0,140,255,.25), transparent 25%),
+    linear-gradient(135deg,#050816,#071a52,#020617);
+    background-attachment:fixed;
 }
 
 .background{
@@ -26,9 +25,10 @@ body{
     height:100%;
     z-index:-1;
     background:
-    radial-gradient(circle at 20% 20%, rgba(0,255,136,.25), transparent 30%),
-    radial-gradient(circle at 80% 80%, rgba(0,140,255,.25), transparent 30%);
-    filter: blur(60px);
+    radial-gradient(circle at 20% 20%, rgba(0,255,136,.35), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(0,140,255,.35), transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.05), transparent 50%);
+    filter:blur(80px);
 }
 
 header{
@@ -99,10 +99,12 @@ margin-bottom:25px;
 }
 
 .card{
-background:#151d35;
-padding:20px;
-border-radius:15px;
-text-align:center;
+    background:rgba(21,29,53,.9);
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 20px rgba(0,255,136,.08);
 }
 
 .card h2{
@@ -118,11 +120,13 @@ margin-bottom:25px;
 
 .status-card,
 .owner-card{
-background:#151d35;
-padding:20px;
-border-radius:15px;
-display:grid;
-gap:15px;
+    background:rgba(21,29,53,.9);
+    padding:20px;
+    border-radius:20px;
+    display:grid;
+    gap:15px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 20px rgba(0,255,136,.08);
 }
 
 .green{
@@ -138,10 +142,18 @@ margin-bottom:15px;
 }
 
 .vpn-card{
-background:#151d35;
-padding:18px;
-border-radius:15px;
-margin-bottom:15px;
+    background:rgba(15,23,42,.92);
+    padding:20px;
+    border-radius:25px;
+    margin-bottom:18px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 25px rgba(0,255,136,.10);
+    transition:.3s;
+}
+
+.vpn-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 35px rgba(0,255,136,.18);
 }
 
 .vpn-top{
@@ -166,20 +178,27 @@ color:#ccc;
 }
 
 .download-btn{
-width:100%;
-padding:14px;
-border:none;
-border-radius:12px;
-background:#00ff88;
-color:#000;
-font-weight:bold;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-position:relative;
-overflow:hidden;
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(90deg,#22ff88,#00e676);
+    color:#000;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px rgba(0,255,136,.4);
 }
 
 .download-btn:hover{
