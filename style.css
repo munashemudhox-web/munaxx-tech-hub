@@ -12,6 +12,7 @@ body{
     color:white;
     padding:20px;
     min-height:100vh;
+    overflow-x:hidden;
     background:
     radial-gradient(circle at top left, rgba(0,255,136,.25), transparent 25%),
     radial-gradient(circle at bottom right, rgba(0,140,255,.25), transparent 25%),
