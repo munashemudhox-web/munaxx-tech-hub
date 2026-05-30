@@ -359,8 +359,3 @@ color:white;
 font-weight:bold;
 cursor:pointer;
 }
-.vpn-card{
-    background: rgba(15,23,42,.9);
-    border-radius: 25px;
-    box-shadow: 0 0 25px rgba(0,255,136,.1);
-}
