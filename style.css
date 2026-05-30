@@ -7,7 +7,7 @@ font-family:Arial,sans-serif;
 
 body{
 background:#020814;
-color:white;
+color:#fff;
 padding:20px;
 overflow-x:hidden;
 }
@@ -32,17 +32,17 @@ margin-bottom:30px;
 }
 
 .logo{
-font-size:1.3rem;
+font-size:1.2rem;
 font-weight:bold;
 }
 
 .dot{
-height:10px;
 width:10px;
+height:10px;
 background:#00ff7f;
 display:inline-block;
 border-radius:50%;
-margin-right:10px;
+margin-right:8px;
 }
 
 .status{
@@ -54,8 +54,8 @@ font-weight:bold;
 width:10px;
 height:10px;
 background:#00ff7f;
-border-radius:50%;
 display:inline-block;
+border-radius:50%;
 margin-right:5px;
 }
 
@@ -65,11 +65,12 @@ margin-top:30px;
 
 .server-badge{
 display:inline-block;
-border:1px solid #00ff7f;
 padding:10px 20px;
-border-radius:10px;
+border:1px solid #00ff7f;
+border-radius:12px;
 color:#00ff7f;
 margin-bottom:20px;
+font-size:.9rem;
 }
 
 .hero h1{
@@ -98,16 +99,26 @@ margin-top:30px;
 .card{
 background:#071223;
 padding:20px;
-border-radius:15px;
+border-radius:18px;
 text-align:center;
 border:1px solid #10233f;
 }
 
 .card h2{
 color:#3b82f6;
+margin-bottom:5px;
 }
 
-.live-status{
+.card p{
+color:#888;
+font-size:.85rem;
+}
+
+.live-status,
+.vpn-section,
+.owner,
+.quote,
+.connect{
 margin-top:40px;
 }
 
@@ -117,7 +128,7 @@ margin-top:40px;
 .quote h3,
 .connect h3{
 margin-bottom:15px;
-letter-spacing:3px;
+letter-spacing:2px;
 color:#888;
 }
 
@@ -131,19 +142,19 @@ gap:20px;
 border:1px solid #10233f;
 }
 
-.green{
-color:#00ff7f;
+.status-card small{
+color:#888;
 }
 
-.vpn-section{
-margin-top:40px;
+.green{
+color:#00ff7f;
 }
 
 .vpn-card{
 background:#071223;
 padding:20px;
 border-radius:20px;
-margin-bottom:20px;
+margin-bottom:15px;
 border:1px solid #10233f;
 }
 
@@ -165,15 +176,16 @@ background:#07331d;
 color:#00ff7f;
 font-weight:bold;
 cursor:pointer;
+transition:.3s;
 }
 
-.owner{
-margin-top:40px;
+.vpn-card button:hover{
+transform:translateY(-2px);
 }
 
 .owner-card{
 background:#071223;
-padding:20px;
+padding:25px;
 border-radius:20px;
 display:flex;
 gap:20px;
@@ -182,7 +194,7 @@ border:1px solid #10233f;
 }
 
 .owner-icon{
-font-size:40px;
+font-size:45px;
 color:#3b82f6;
 }
 
@@ -191,16 +203,27 @@ margin-top:15px;
 }
 
 .skills span{
+display:inline-block;
+padding:8px 15px;
 background:#09172b;
 border:1px solid #1b3d6f;
-padding:8px 15px;
-border-radius:8px;
+border-radius:10px;
 margin-right:10px;
-display:inline-block;
+margin-top:8px;
 }
 
-.quote{
-margin-top:40px;
+.whatsapp-owner-btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+margin-top:15px;
+padding:12px 18px;
+background:#07331d;
+color:#00ff7f;
+text-decoration:none;
+border:1px solid #00ff7f;
+border-radius:12px;
+font-weight:bold;
 }
 
 .quote-box{
@@ -209,36 +232,95 @@ padding:25px;
 border-radius:20px;
 border-left:4px solid #3b82f6;
 color:#bbb;
-font-style:italic;
-}
-
-.connect{
-margin-top:40px;
+line-height:1.8;
 }
 
 .connect-btn{
 display:flex;
 align-items:center;
-gap:10px;
-text-decoration:none;
-color:white;
+gap:12px;
 background:#071223;
-padding:20px;
+border:1px solid #10233f;
+padding:18px;
 border-radius:15px;
 margin-bottom:15px;
-border:1px solid #07331d;
+text-decoration:none;
+color:white;
+font-weight:bold;
 }
 
 .connect-btn i{
-font-size:24px;
+font-size:22px;
 color:#00ff7f;
 }
 
 footer{
 text-align:center;
-margin-top:40px;
+margin-top:50px;
 padding:20px;
 color:#777;
+line-height:1.8;
+}
+
+/* POPUP */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:9999;
+}
+
+.popup-content{
+background:#071223;
+width:100%;
+max-width:420px;
+padding:30px;
+border-radius:25px;
+border:1px solid #10233f;
+text-align:center;
+}
+
+.popup-emoji{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.popup-content h2{
+margin-bottom:15px;
+}
+
+.popup-content p{
+color:#aaa;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.popup-box{
+background:#09172b;
+border:1px solid #1b3d6f;
+padding:18px;
+border-radius:12px;
+margin-bottom:15px;
+color:#888;
+}
+
+.close-btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+cursor:pointer;
 }
 
 @media(max-width:768px){
@@ -250,6 +332,10 @@ font-size:3rem;
 .owner-card{
 flex-direction:column;
 text-align:center;
+}
+
+.status-card{
+grid-template-columns:1fr;
 }
 
 }
