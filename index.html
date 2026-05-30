@@ -3,226 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUNAXX VPN TECH HUB</title>
+<title>MUNAXXTECH VPNS HUB</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="tsparticles"></div>
+<div class="bg-animation"></div>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="spinner"></div>
-  <p>Connecting Secure Network...</p>
+<!-- LOGIN PAGE -->
+<section class="auth-container">
+
+<div class="auth-box">
+
+<div class="logo">
+<h1>MUNAXXTECH</h1>
+<p>VPNS HUB</p>
 </div>
 
-<!-- LOGIN -->
-<section id="loginPage" class="login">
-  <div class="login-box">
-    <h1>MUNAXX VPN</h1>
+<div class="tabs">
+<button class="active">Login</button>
+<button>Sign Up</button>
+</div>
 
-    <input id="user" placeholder="Username">
-    <input id="pass" type="password" placeholder="Password">
+<form>
 
-    <button onclick="login()">LOGIN</button>
+<div class="input-group">
+<label>Email</label>
+<input type="email" placeholder="Enter email">
+</div>
 
-    <small>admin / admin</small>
-  </div>
+<div class="input-group">
+<label>Password</label>
+<input type="password" placeholder="Enter password">
+</div>
+
+<button class="main-btn">
+Login
+</button>
+
+</form>
+
+</div>
+
 </section>
 
 <!-- DASHBOARD -->
-<section id="dashboard" style="display:none;">
 
-<header>
-  <div class="logo">MUNAXX <span>VPN HUB</span></div>
-  <div class="live"><span class="dot"></span> LIVE</div>
-  <div id="clock"></div>
+<section class="dashboard">
+
+<header class="hero">
+
+<h1>MUNAXXTECH VPNS HUB</h1>
+
+<p>
+Premium VPN Configurations & Secure Internet Access
+</p>
+
 </header>
 
-<!-- NAV -->
-<div class="nav">
-  <button onclick="showTab('home')">HOME</button>
-  <button onclick="showTab('vpn')">VPN LIST</button>
-  <button onclick="showTab('vip')">VIP</button>
+<!-- STATUS -->
+
+<div class="status-grid">
+
+<div class="status-card">
+<h3>VPN STATUS</h3>
+<span class="online">ONLINE</span>
 </div>
 
-<!-- HOME -->
-<div id="home" class="tab active">
+<div class="status-card">
+<h3>SERVERS</h3>
+<span>15+</span>
+</div>
 
-<section class="hero">
-  <div class="badge">● SECURE SERVER ONLINE</div>
-  <h1>VPN <span>ACCESS</span> HUB</h1>
-  <p>Zimbabwe 🇿🇼 fastest VPN configs system</p>
-</section>
-
-<div class="quotes">
-  <div class="q active">⭐ Fast, secure & professional VPN</div>
-  <div class="q">⭐ MUNAXX TECH connects Africa</div>
-  <div class="q">⭐ Stable tunnels 24/7 uptime</div>
+<div class="status-card">
+<h3>UPTIME</h3>
+<span>99.9%</span>
 </div>
 
 </div>
 
-<!-- VPN LIST -->
-<div id="vpn" class="tab">
+<!-- VPN CONFIGS -->
 
-<h3 class="title">FREE VPN CONFIGS</h3>
+<h2 class="section-title">
+Available VPN Configurations
+</h2>
 
-<div class="grid">
+<div class="vpn-grid">
 
-<div class="vpn" onclick="download('HA Tunnel')">HA Tunnel</div>
-<div class="vpn" onclick="download('HTTP Injector')">HTTP Injector</div>
-<div class="vpn" onclick="download('HTTP Custom')">HTTP Custom</div>
-<div class="vpn" onclick="download('NPV Tunnel')">NPV Tunnel</div>
-<div class="vpn" onclick="download('V2Box')">V2Box</div>
-<div class="vpn" onclick="download('SocksIP')">SocksIP</div>
-<div class="vpn" onclick="download('Stark VPN')">Stark VPN</div>
-<div class="vpn" onclick="download('Tik Tunnel')">Tik Tunnel</div>
+<div class="vpn-card">
 
-</div>
+<h3>SSH PREMIUM</h3>
 
-</div>
+<p>
+Fast SSH configuration for stable internet access.
+</p>
 
-<!-- VIP -->
-<div id="vip" class="tab">
-
-<h3 class="title">VIP CONFIGS 🔒</h3>
-
-<div class="vip-box">
-
-<p>Enter VIP Code:</p>
-<input id="vipCode" placeholder="VIP CODE">
-
-<button onclick="checkVIP()">UNLOCK</button>
+<a href="#" class="download-btn">
+Download Config
+</a>
 
 </div>
 
-<div id="vipContent" style="display:none;">
+<div class="vpn-card">
 
-<div class="grid">
+<h3>OPENVPN</h3>
 
-<div class="vpn" onclick="download('VIP HA Tunnel')">VIP HA Tunnel</div>
-<div class="vpn" onclick="download('VIP HTTP Injector')">VIP HTTP Injector</div>
-<div class="vpn" onclick="download('VIP V2Ray')">VIP V2Ray</div>
+<p>
+Secure OpenVPN files for Android and PC.
+</p>
+
+<a href="#" class="download-btn">
+Download Config
+</a>
 
 </div>
+
+<div class="vpn-card">
+
+<h3>HTTP CUSTOM</h3>
+
+<p>
+HTTP Custom files optimized for speed.
+</p>
+
+<a href="#" class="download-btn">
+Download Config
+</a>
+
+</div>
+
+<div class="vpn-card">
+
+<h3>UDP CUSTOM</h3>
+
+<p>
+Gaming and streaming optimized VPN.
+</p>
+
+<a href="#" class="download-btn">
+Download Config
+</a>
 
 </div>
 
 </div>
 
 <!-- OWNER -->
-<div class="owner">
-<p>Owner: MUNAXX</p>
-<p>Zimbabwe 🇿🇼 Harare</p>
+
+<section class="owner-section">
+
+<h2>OWNER INFORMATION</h2>
+
+<div class="owner-card">
+
+<div class="owner-avatar">
+M
 </div>
 
-<!-- CONTACT -->
-<a class="wa" href="https://wa.me/263780930212" target="_blank">WHATSAPP CONTACT</a>
-<a class="channel" href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A" target="_blank">WHATSAPP CHANNEL</a>
+<div class="owner-details">
 
-<footer>© 2025 MUNAXX VPN HUB</footer>
+<p><strong>Name:</strong> Munaxx</p>
+
+<p><strong>Country:</strong> Zimbabwe 🇿🇼</p>
+
+<p><strong>City:</strong> Harare</p>
+
+<p><strong>Code:</strong> HTML</p>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-  <div class="box">
-    <h2>FILE NOT AVAILABLE</h2>
-    <p id="fileText"></p>
-    <button onclick="closeModal()">CLOSE</button>
-  </div>
+<!-- CONTACTS -->
+
+<section class="contact-section">
+
+<h2>CONNECT WITH MUNAXXTECH</h2>
+
+<div class="contact-buttons">
+
+<a
+href="https://wa.me/263716250711"
+target="_blank"
+class="whatsapp-btn">
+
+Chat On WhatsApp
+
+</a>
+
+<a
+href="https://whatsapp.com/channel/0029Vb84YoXBPzjUjqbZ5Y3A"
+target="_blank"
+class="channel-btn">
+
+Join WhatsApp Channel
+
+</a>
+
 </div>
 
-<!-- TOAST -->
-<div id="toast"></div>
+</section>
 
-<script>
+<!-- FEATURES -->
 
-// LOADER
-window.onload=()=>{
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},1200);
-};
+<section class="features">
 
-// LOGIN
-function login(){
-let u=user.value;
-let p=pass.value;
+<h2>WHY CHOOSE US?</h2>
 
-if(u==="admin" && p==="admin"){
-loginPage.style.display="none";
-dashboard.style.display="block";
-toast("Login successful");
-}else{
-toast("Wrong login");
-}
-}
+<div class="feature-grid">
 
-// TABS
-function showTab(tab){
-document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
-document.getElementById(tab).classList.add("active");
-}
+<div class="feature-card">
+⚡ Fast Servers
+</div>
 
-// CLOCK
-setInterval(()=>clock.innerText=new Date().toLocaleTimeString(),1000);
+<div class="feature-card">
+🔒 Secure Connection
+</div>
 
-// DOWNLOAD
-function download(name){
-fileText.innerText=name+" config is not uploaded yet.";
-modal.style.display="flex";
-}
+<div class="feature-card">
+🌍 Global Access
+</div>
 
-// VIP
-function checkVIP(){
-if(vipCode.value==="MUNAXXVIP"){
-vipContent.style.display="block";
-toast("VIP Unlocked");
-}else{
-toast("Wrong VIP Code");
-}
-}
+<div class="feature-card">
+📱 Mobile Friendly
+</div>
 
-// MODAL
-function closeModal(){
-modal.style.display="none";
-}
+</div>
 
-// TOAST
-function toast(msg){
-let t=document.getElementById("toast");
-t.innerText=msg;
-t.classList.add("show");
-setTimeout(()=>t.classList.remove("show"),2000);
-}
+</section>
 
-// QUOTES
-let q=document.querySelectorAll(".q");
-let i=0;
-setInterval(()=>{
-q[i].classList.remove("active");
-i=(i+1)%q.length;
-q[i].classList.add("active");
-},3000);
+<!-- FOOTER -->
 
-// PARTICLES
-tsParticles.load("tsparticles",{
-particles:{
-number:{value:50},
-color:{value:"#22c55e"},
-links:{enable:true,color:"#2563eb",distance:140},
-move:{enable:true,speed:1},
-size:{value:2}
-}
-});
+<footer>
 
-</script>
+<h2>MUNAXXTECH VPNS HUB</h2>
+
+<p>
+Providing secure and reliable VPN configurations.
+</p>
+
+<p>
+© 2025 MUNAXXTECH VPNS HUB
+</p>
+
+</footer>
+
+</section>
 
 </body>
 </html>
