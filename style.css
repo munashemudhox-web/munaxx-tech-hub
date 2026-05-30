@@ -1,3 +1,4 @@
+
 *{
 margin:0;
 padding:0;
@@ -6,10 +7,9 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#020814;
-color:#fff;
+background:#0a0f1f;
+color:white;
 padding:20px;
-overflow-x:hidden;
 }
 
 .background{
@@ -18,9 +18,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:
-radial-gradient(circle at 20% 20%,#0b4cff33,transparent),
-radial-gradient(circle at 80% 50%,#00ff7f22,transparent);
+background:linear-gradient(135deg,#0a0f1f,#101b3d);
 z-index:-1;
 }
 
@@ -32,237 +30,262 @@ margin-bottom:30px;
 }
 
 .logo{
-font-size:1.2rem;
+font-size:20px;
 font-weight:bold;
+display:flex;
+align-items:center;
+gap:8px;
 }
 
-.dot{
-width:10px;
-height:10px;
-background:#00ff7f;
-display:inline-block;
-border-radius:50%;
-margin-right:8px;
-}
-
-.status{
-color:#00ff7f;
-font-weight:bold;
-}
-
+.dot,
 .live-dot{
 width:10px;
 height:10px;
-background:#00ff7f;
-display:inline-block;
+background:#00ff88;
 border-radius:50%;
-margin-right:5px;
+box-shadow:0 0 10px #00ff88;
+}
+
+.status{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:bold;
+color:#00ff88;
 }
 
 .hero{
-margin-top:30px;
+text-align:center;
+margin-bottom:30px;
 }
 
 .server-badge{
 display:inline-block;
-padding:10px 20px;
-border:1px solid #00ff7f;
-border-radius:12px;
-color:#00ff7f;
-margin-bottom:20px;
-font-size:.9rem;
+padding:8px 15px;
+background:#00ff8830;
+border:1px solid #00ff88;
+border-radius:20px;
+margin-bottom:15px;
 }
 
 .hero h1{
-font-size:4rem;
-line-height:1;
-font-weight:900;
+font-size:45px;
+line-height:1.1;
+margin-bottom:15px;
 }
 
-.hero span{
-color:#3b82f6;
+.hero h1 span{
+color:#00ff88;
 }
 
 .hero p{
-margin-top:20px;
-color:#aaa;
-line-height:1.8;
+color:#bdbdbd;
 }
 
 .stats{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:15px;
-margin-top:30px;
+margin-bottom:25px;
 }
 
 .card{
-background:#071223;
+background:#151d35;
 padding:20px;
-border-radius:18px;
+border-radius:15px;
 text-align:center;
-border:1px solid #10233f;
 }
 
 .card h2{
-color:#3b82f6;
-margin-bottom:5px;
-}
-
-.card p{
-color:#888;
-font-size:.85rem;
+color:#00ff88;
 }
 
 .live-status,
-.vpn-section,
 .owner,
 .quote,
 .connect{
-margin-top:40px;
+margin-bottom:25px;
 }
 
-.live-status h3,
+.status-card,
+.owner-card{
+background:#151d35;
+padding:20px;
+border-radius:15px;
+display:grid;
+gap:15px;
+}
+
+.green{
+color:#00ff88;
+}
+
 .vpn-section h3,
+.live-status h3,
 .owner h3,
 .quote h3,
 .connect h3{
 margin-bottom:15px;
-letter-spacing:2px;
-color:#888;
-}
-
-.status-card{
-background:#071223;
-padding:20px;
-border-radius:20px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-border:1px solid #10233f;
-}
-
-.status-card small{
-color:#888;
-}
-
-.green{
-color:#00ff7f;
 }
 
 .vpn-card{
-background:#071223;
-padding:20px;
-border-radius:20px;
-margin-bottom:15px;
-border:1px solid #10233f;
-}
-
-.vpn-card h2{
-margin-bottom:5px;
-}
-
-.vpn-card p{
-color:#888;
+background:#151d35;
+padding:18px;
+border-radius:15px;
 margin-bottom:15px;
 }
 
-.vpn-card button{
+.vpn-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.tag{
+background:#00ff8830;
+color:#00ff88;
+padding:5px 10px;
+border-radius:10px;
+font-size:12px;
+}
+
+.encrypt{
+margin-top:5px;
+font-size:13px;
+color:#ccc;
+}
+
+.download-btn{
 width:100%;
-padding:15px;
+padding:14px;
 border:none;
 border-radius:12px;
-background:#07331d;
-color:#00ff7f;
+background:#00ff88;
+color:#000;
 font-weight:bold;
 cursor:pointer;
-transition:.3s;
-}
-
-.vpn-card button:hover{
-transform:translateY(-2px);
-}
-
-.owner-card{
-background:#071223;
-padding:25px;
-border-radius:20px;
 display:flex;
-gap:20px;
 align-items:center;
-border:1px solid #10233f;
+justify-content:center;
+gap:10px;
+position:relative;
+overflow:hidden;
+}
+
+.download-btn:hover{
+transform:scale(1.02);
+}
+
+.download-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.4),
+transparent
+);
+animation:shine 2.5s infinite;
+}
+
+@keyframes shine{
+100%{
+left:100%;
+}
+}
+
+.signal-bars{
+display:flex;
+align-items:flex-end;
+gap:3px;
+height:18px;
+}
+
+.signal-bars span{
+width:4px;
+background:#000;
+border-radius:4px;
+animation:signal 1s infinite ease-in-out;
+}
+
+.signal-bars span:nth-child(1){
+height:5px;
+animation-delay:0s;
+}
+
+.signal-bars span:nth-child(2){
+height:8px;
+animation-delay:.2s;
+}
+
+.signal-bars span:nth-child(3){
+height:12px;
+animation-delay:.4s;
+}
+
+.signal-bars span:nth-child(4){
+height:16px;
+animation-delay:.6s;
+}
+
+@keyframes signal{
+0%,100%{
+opacity:.3;
+transform:scaleY(.5);
+}
+50%{
+opacity:1;
+transform:scaleY(1);
+}
 }
 
 .owner-icon{
-font-size:45px;
-color:#3b82f6;
+font-size:50px;
+text-align:center;
+color:#00ff88;
 }
 
 .skills{
-margin-top:15px;
+display:flex;
+gap:10px;
+margin-top:10px;
 }
 
 .skills span{
-display:inline-block;
-padding:8px 15px;
-background:#09172b;
-border:1px solid #1b3d6f;
+background:#00ff8830;
+padding:6px 10px;
 border-radius:10px;
-margin-right:10px;
-margin-top:8px;
 }
 
-.whatsapp-owner-btn{
-display:inline-flex;
-align-items:center;
-gap:10px;
-margin-top:15px;
-padding:12px 18px;
-background:#07331d;
-color:#00ff7f;
+.whatsapp-owner-btn,
+.connect-btn{
+display:block;
 text-decoration:none;
-border:1px solid #00ff7f;
+background:#25d366;
+color:white;
+padding:14px;
 border-radius:12px;
+text-align:center;
+margin-top:10px;
 font-weight:bold;
 }
 
 .quote-box{
-background:#071223;
-padding:25px;
-border-radius:20px;
-border-left:4px solid #3b82f6;
-color:#bbb;
-line-height:1.8;
-}
-
-.connect-btn{
-display:flex;
-align-items:center;
-gap:12px;
-background:#071223;
-border:1px solid #10233f;
-padding:18px;
-border-radius:15px;
-margin-bottom:15px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-}
-
-.connect-btn i{
-font-size:22px;
-color:#00ff7f;
+background:#151d35;
+padding:15px;
+border-radius:12px;
 }
 
 footer{
 text-align:center;
-margin-top:50px;
-padding:20px;
-color:#777;
-line-height:1.8;
+margin-top:30px;
+color:#aaa;
 }
-
-/* POPUP */
 
 .popup{
 display:none;
@@ -271,71 +294,40 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.85);
+background:rgba(0,0,0,.8);
 justify-content:center;
 align-items:center;
 padding:20px;
-z-index:9999;
 }
 
 .popup-content{
-background:#071223;
-width:100%;
-max-width:420px;
-padding:30px;
-border-radius:25px;
-border:1px solid #10233f;
+background:#151d35;
+padding:25px;
+border-radius:15px;
 text-align:center;
+max-width:350px;
+width:100%;
 }
 
 .popup-emoji{
-font-size:60px;
-margin-bottom:15px;
-}
-
-.popup-content h2{
-margin-bottom:15px;
-}
-
-.popup-content p{
-color:#aaa;
-line-height:1.8;
-margin-bottom:20px;
+font-size:50px;
+margin-bottom:10px;
 }
 
 .popup-box{
-background:#09172b;
-border:1px solid #1b3d6f;
-padding:18px;
-border-radius:12px;
-margin-bottom:15px;
-color:#888;
+background:#0a0f1f;
+padding:10px;
+margin-top:10px;
+border-radius:10px;
 }
 
 .close-btn{
-width:100%;
-padding:16px;
+margin-top:15px;
+padding:12px 20px;
 border:none;
-border-radius:12px;
-background:#2563eb;
+border-radius:10px;
+background:#ff4d4d;
 color:white;
 font-weight:bold;
 cursor:pointer;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:3rem;
-}
-
-.owner-card{
-flex-direction:column;
-text-align:center;
-}
-
-.status-card{
-grid-template-columns:1fr;
-}
-
 }
